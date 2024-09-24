@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro e Banco de dados </title>
+    <h2>Exercício 11 <p></p>   objetivo desta tarefa é desenvolver um sistema simples de cadastro de alunos utilizando HTML e PHP, com a 
+capacidade de registrar e gerenciar informações relacionadas a atividades complementares. O sistema deve permitir 
+o cadastro de dados dos alunos em um banco de dados MySQL, bem como a inserção e atualização da carga horária 
+referente às atividades complementares. Os alunos deverão ser identificados por meio de sua matrícula, e a carga 
+horária poderá ser atualizada conforme forem realizadas mais atividades. </h2>
+</head>
+<body>
+<form action="cadastro.php" method="POST">
+    <label for="nome">Nome do Aluno:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+    
+    <label for="matricula">Matrícula:</label>
+    <input type="text" id="matricula" name="matricula" required><br><br>
+    
+    <label for="curso">Curso:</label>
+    <input type="text" id="curso" name="curso" required><br><br>
+    
+    <label for="email">E-mail Institucional:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone"><br><br>
+    
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco"><br><br>
+    
+    <label for="cep">CEP:</label>
+    <input type="text" id="cep" name="cep"><br><br>
+    
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade"><br><br>
+    
+    <label for="uf">UF:</label>
+    <input type="text" id="uf" name="uf" maxlength="2" required><br><br>
+    
+    <label for="curso_horas">Curso para Horas Complementares:</label>
+    <input type="text" id="curso_horas" name="curso_horas" required><br><br>
+    
+    <label for="carga_horaria">Carga Horária:</label>
+    <input type="number" id="carga_horaria" name="carga_horaria" required><br><br>
+    
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+<a href="index.html">Clique aqui para voltar ao menu.</a>
+
+<style>
+
+    p {
+color: yellow;
+text-align: center;
+} 
+body{
+height: 100%;
+width: 100%;
+background-color: blueviolet;
+text-align: center;
+}
+
+</style>
+
+<?php
+        echo "<p>";
+        setlocale(LC_ALL, 'pt_BR.utf8');
+        echo strftime('%d/%B/%G');
+    
+        echo "<p>";
+        echo "Informações do browser (User agente):" . $_SERVER
+        ['HTTP_USER_AGENT'];
+    ?>
+
+</body>
+</html>
